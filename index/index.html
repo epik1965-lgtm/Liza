@@ -4,7 +4,203 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liza Kalinina</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Базовый сброс */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Шапка */
+        .header {
+            border-bottom: 1px solid #000;
+            padding: 10px 0;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .main-nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* Кнопки */
+        button {
+            background: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        /* Главный блок (Герой) */
+        .hero-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .hero-images {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .hero-content {
+            flex: 2;
+            min-width: 300px;
+        }
+        .hero-content h1, .hero-content h2, .hero-content h3 {
+            margin-bottom: 15px;
+        }
+        .services-list {
+            margin: 15px 0 15px 20px;
+        }
+        .action-buttons {
+            margin-top: 20px;
+        }
+
+        /* Скидки */
+        .offers-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            background-color: #f9f9f9;
+        }
+        .offers-content {
+            flex: 2;
+        }
+        .discount-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .discount-item {
+            border: 1px solid #ccc;
+            padding: 15px;
+        }
+        .offers-image {
+            flex: 1;
+        }
+
+        /* Прайс */
+        .price-section {
+            padding-top: 40px;
+        }
+        .price-tables {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .price-col {
+            flex: 1;
+            min-width: 300px;
+        }
+        .price-col h3 {
+            margin-bottom: 20px;
+            border-bottom: 2px solid #000;
+        }
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed #ccc;
+            padding: 10px 0;
+        }
+        .correction-block {
+            background: #eee;
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+        .correction-block ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        .small {
+            font-size: 12px;
+            color: #555;
+            margin-top: 10px;
+        }
+        .other-services h3 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        .service-details {
+            margin-top: 20px;
+            padding: 15px;
+            border-left: 3px solid #000;
+        }
+
+        /* Обучение */
+        .training-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            background: #f1f1f1;
+        }
+        .training-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        .training-content {
+            flex: 2;
+            min-width: 300px;
+        }
+        .training-content ul {
+            margin: 15px 0 15px 20px;
+        }
+        .highlight-price {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        /* Футер */
+        .footer-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            background: #000;
+            color: #fff;
+        }
+        .footer-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        .footer-map {
+            flex: 1;
+            min-width: 300px;
+        }
+    </style>
 </head>
 <body>
 
@@ -17,190 +213,189 @@
                 <a href="#training">ОБУЧЕНИЕ</a>
                 <a href="#faq">FAQ</a>
             </nav>
-            <div class="header-contacts">
-                <a href="tel:+79819115949" class="phone">+7(981)-911-59-49</a>
-                <a href="#record" class="btn">ЗАПИСАТЬСЯ</a>
-            </div>
+            <div class="header-phone">+7(981)-911-59-49</div>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container hero-inner">
-            <div class="hero-content">
-                <h1>ОБРАЗЫ</h1>
-                <p>В САМОМ СЕРДЦЕ ПЕТЕРБУРГА:</p>
-                <p>Студия наращивания и ухода за волосами "by Liza Kalinina". Вы наслаждаетесь комфортом вдали от городской суеты, находитесь в руках профессионалов своего дела.</p>
-                <div class="hero-actions">
-                    <a href="#price" class="btn">НАРАЩИВАНИЕ</a>
-                    <a href="#consult" class="btn btn-outline">КОНСУЛЬТАЦИЯ ПО ФОТО</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="images/hero.jpg" alt="Liza Kalinina">
+    <section class="hero-section container">
+        <div class="hero-images">
+            <img src="images/leopard-1.jpg" alt="Леопард 1" class="img-fluid">
+            <img src="images/blonde-back.jpg" alt="Девушка со спины" class="img-fluid">
+        </div>
+        
+        <div class="hero-content">
+            <h1>ОБРАЗЫ</h1>
+            <h2>O HAC</h2>
+            <h3>В САМОМ СЕРДЦЕ ПЕТЕРБУРГА:</h3>
+            <p>Волоска лучшЕГО КАЧЕСТВА, Дианой длины / СТРУКТУРЫ ПВЕTA</p>
+            
+            <h3>ТОЛЬКО КАЧЕСТВЕННЫЕ МАТЕРИАЛЫ</h3>
+            <h3>ИЗДИВИДУАЛЬьный подход К КАЖДОМУ</h3>
+            
+            <p>студим наращивания и увда за волосами "вy Liza Kalininu вы наслаждаетесь комфортные отделан от городской суеты. находитесь в рукая профессионалов своего дела</p>
+            
+            <p>Націи специалисты окажут вам услуги</p>
+            <ul class="services-list">
+                <li>наращивание вODOC</li>
+                <li>угоди, стрижки окрашивание образы для вашия мероприятий</li>
+                <li>прически</li>
+                <li>свадебный обрати</li>
+            </ul>
+            
+            <p>идетален</p>
+            <p>Так же каждую неделю для вас действует система скидок, Благодаря которо Более приятным!</p>
+            
+            <div class="action-buttons">
+                <button>Уход для</button>
+                <button>КОНСУЛЬТАЦИЯ по Фото</button>
+                <button>ЗАПИСАТЬСЯ</button>
+                <button>НАРАЩИВАНИЕ</button>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">О НАС</h2>
-            <div class="about-grid">
-                <div class="about-card">
-                    <h3>ТОЛЬКО КАЧЕСТВЕННЫЕ МАТЕРИАЛЫ</h3>
-                    <p>Волосы лучшего качества, любой длины / структуры / цвета.</p>
-                </div>
-                <div class="about-card">
-                    <h3>ИНДИВИДУАЛЬНЫЙ ПОДХОД К КАЖДОМУ</h3>
-                    <p>Наши специалисты окажут вам услуги: наращивание волос, уходы, стрижки, окрашивание, прически, свадебный образ.</p>
-                </div>
-                <div class="about-card">
-                    <h3>КОМФОРТ</h3>
-                    <p>Идеален каждый миллиметр. Так же каждую неделю для вас действует система скидок, благодаря которой процедуры становятся еще более приятными!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="special-offers">
-        <div class="container">
-            <h2 class="section-title">СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ</h2>
-            <p class="subtitle">Каждый месяц для вас действует ЕЖЕНЕДЕЛЬНАЯ система скидок</p>
-            <div class="offers-grid">
-                <div class="offer-item">
-                    <h4>КАЖДЫЙ МЕСЯЦ С 1 ПО 7 ЧИСЛО</h4>
+    <section class="offers-section container">
+        <div class="offers-content">
+            <h2>КОМФОРТ</h2>
+            <h2>СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ</h2>
+            <p>Каждый месяц для вас действует ЕЖЕНЕДЕЛЬНАЯ система скидок</p>
+            
+            <div class="discount-grid">
+                <div class="discount-item">
+                    <h4>КАЖДЫЙ МЕСЯЦ С 1 ПО 7 Число</h4>
                     <p>УКЛАДКА В ПОДАРОК</p>
                 </div>
-                <div class="offer-item">
-                    <h4>КАЖДЫЙ МЕСЯЦ С 8 ПО 14 ЧИСЛО</h4>
-                    <p>Уход</p>
+                <div class="discount-item">
+                    <h4>КАЖДЫЙ МЕСЯЦ С  ПО 14 Число</h4>
+                    <p>уход</p>
                 </div>
-                <div class="offer-item">
+                <div class="discount-item">
                     <h4>КАЖДЫЙ МЕСЯЦ С 15 ПО 21 ЧИСЛО</h4>
-                    <p>Наращивание</p>
+                    <p>НАРАЩИВАНИЕ ВОЛОС</p>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section id="price" class="pricing">
-        <div class="container">
-            <h2 class="section-title">НАРАЩИВАНИЕ ВОЛОС</h2>
-            <div class="price-wrapper">
-                
-                <div class="price-block">
-                    <h3>КАТЕГОРИЯ: ДЕТСКИЕ КАТЕГОРИЯ: ЛЮКС</h3>
-                    <div class="price-row"><span>50 см 120 прядей</span> <span>19.900 ₽</span></div>
-                    <div class="price-row"><span>60 см 120 прядей</span> <span>21.000 ₽</span></div>
-                    <div class="price-row"><span>70 см 100 прядей</span> <span>22.000 ₽</span></div>
-                    <div class="price-row"><span>75 см 100 прядей</span> <span>23.900 ₽</span></div>
-                    <div class="price-row"><span>80 см 100 прядей</span> <span>26.000 ₽</span></div>
-                    <div class="price-row"><span>90 см 100 прядей</span> <span>28.000 ₽</span></div>
-                    <div class="price-row"><span>100 см 100 прядей</span> <span>30.000 ₽</span></div>
-                </div>
-
-                <div class="price-block">
-                    <h3>КАТЕГОРИЯ: ПРЕМИУМ</h3>
-                    <div class="price-row"><span>50 см 100 прядей</span> <span>19.000 ₽</span></div>
-                    <div class="price-row"><span>60 см 100 прядей</span> <span>22.000 ₽</span></div>
-                    <div class="price-row"><span>70 см 100 прядей</span> <span>23.000 ₽</span></div>
-                    <div class="price-row"><span>80 см 100 прядей</span> <span>27.000 ₽</span></div>
-                    <div class="price-row"><span>85 см 100 прядей</span> <span>29.000 ₽</span></div>
-                    <div class="price-row"><span>90 см 100 прядей</span> <span>32.000 ₽</span></div>
-                </div>
-
-            </div>
-
-            <div class="correction-block">
-                <h3>КОРРЕКЦИЯ</h3>
-                <p class="highlight">Стоимость коррекции 10 ₽ за прядь</p>
-                <p>В стоимость входит: снятие старых капсул, мытье головы, распутывание спутанных прядей, формирование новых капсул, укладка после процедуры.</p>
-                <p class="small-text">*стоимость указана с работой мастера</p>
-            </div>
-
-            <h2 class="section-title">УСЛУГИ</h2>
-            <div class="services-grid">
-                <div class="service-item">
-                    <h3>ОКРАШИВАНИЕ ВОЛОС</h3>
-                    <div class="price-row"><span>Сложное окрашивание</span> <span>13.000 - 18.000 ₽</span></div>
-                </div>
-                
-                <div class="service-item">
-                    <h3>КЕРАТИНОВОЕ ВЫПРЯМЛЕНИЕ ВОЛОС</h3>
-                    <div class="price-row"><span>Короткие волосы</span> <span>7.000 ₽</span></div>
-                    <div class="price-row"><span>Средние волосы</span> <span>10.000 ₽</span></div>
-                    <div class="price-row"><span>Длинные волосы</span> <span>от 12.000 - 16.000 ₽</span></div>
-                </div>
-
-                <div class="service-item">
-                    <h3>БИКСИПЛАСТИЯ</h3>
-                    <div class="price-row"><span>Короткие волосы</span> <span>7.000 ₽</span></div>
-                    <div class="price-row"><span>Средние волосы</span> <span>10.000 ₽</span></div>
-                    <div class="price-row"><span>Длинные волосы</span> <span>от 12.000 - 16.000 ₽</span></div>
-                </div>
-
-                <div class="service-item">
-                    <h3>TOKIO Inkarami</h3>
-                    <p>Система глубокого восстановления, не имеющая аналогов в мире. Восстанавливает структуру на молекулярном уровне. Эффект держится от 4 до 6 недель и имеет накопительный характер.</p>
-                </div>
-
-                <div class="service-item">
-                    <h3>СЧАСТЬЕ ДЛЯ ВОЛОС от LEBEL</h3>
-                    <p>Глубокое увлажнение и лечение. Восстанавливает внутреннюю структуру, а не просто маскирует дефекты. Идеально для поврежденных, сухих, окрашенных волос.</p>
-                    <div class="price-row"><span>Абонемент на 5 процедур</span> <span>Скидка</span></div>
-                </div>
-
-                <div class="service-item">
-                    <h3>ВИЗАЖИСТ</h3>
-                    <div class="price-row"><span>Макияж</span> <span>7.000 ₽</span></div>
-                    <div class="price-row"><span>Макияж + прическа</span> <span>12.000 ₽</span></div>
-                </div>
-            </div>
+        <div class="offers-image">
+            <img src="images/leopard-2.jpg" alt="Леопард спина" class="img-fluid">
         </div>
     </section>
 
-    <section id="training" class="training">
-        <div class="container">
-            <h2 class="section-title">ОБУЧЕНИЕ by Liza Kalinina</h2>
-            <div class="training-inner">
-                <div class="training-content">
-                    <h3>АТМОСФЕРА СТУДИИ</h3>
-                    <p>Этот курс для тебя если ты хочешь: научиться делать маленькие аккуратные капсулы, быстро наращивать и снимать волосы, делать крутые и чистые работы, разбираться на 100% в волосах и иметь базу проверенных поставщиков.</p>
-                    <h4>На курсе:</h4>
-                    <ul class="clean-list">
-                        <li>УРОК капсулирования</li>
-                        <li>УРОК снятия волос</li>
-                        <li>УРОК наращивания волос</li>
-                        <li>УРОК коррекции волос</li>
-                        <li>Отработка на моделях</li>
-                    </ul>
-                </div>
-                <div class="training-info">
-                    <div class="info-box">
-                        <p><strong>Формат:</strong> 5-ти дневный курс</p>
-                        <p><strong>Время:</strong> Длительность каждого занятия до 8 часов (10:00 - 22:00)</p>
-                        <p><strong>Бонусы:</strong> Сертификат, поддержка 24/7</p>
-                        <h3 class="course-price">Стоимость курса - 75.000 ₽</h3>
-                        <a href="#consult" class="btn">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
-                    </div>
-                </div>
+    <section id="price" class="price-section container">
+        <div class="price-tables">
+            <div class="price-col">
+                <h3>КАТЕГОРИЯ: ДЕТСКИЕ КАТЕГОРИЯ: ЛЮКС</h3>
+                <div class="price-row"><span>50 см 120 прядей</span> <span>19.900P</span></div>
+                <div class="price-row"><span>60 см 120 прядей</span> <span>21,900P</span></div>
+                <div class="price-row"><span>70 см 100 пред</span> <span>22 000P</span></div>
+                <div class="price-row"><span>75 см  300 пряди</span> <span>23.900P</span></div>
+                <div class="price-row"><span>80 50-100 прядий</span> <span>260000</span></div>
+                <div class="price-row"><span>90  100 прядей</span> <span>28000P</span></div>
+                <div class="price-row"><span>100 см-100 прошені</span> <span>30.000</span></div>
             </div>
+            
+            <div class="price-col">
+                <h3>КАТЕГОРИЯ: ПРЕМИУМ</h3>
+                <div class="price-row"><span>50 см 100 прижден</span> <span>19.000р</span></div>
+                <div class="price-row"><span>60  100 подей</span> <span>220000</span></div>
+                <div class="price-row"><span>70 см 100 предий</span> <span>23000P</span></div>
+                <div class="price-row"><span>85100 прядей</span> <span>29,000P</span></div>
+                <div class="price-row"><span>90 см 100 приден</span> <span>32:0000</span></div>
+            </div>
+        </div>
+
+        <div class="correction-block">
+            <h3>КОРРЕКЦИЯ</h3>
+            <p>Стоимость коррекции 10 за прядь</p>
+            <p>В стомнесть входит</p>
+            <ul>
+                <li>снятие старыя капсул</li>
+                <li>митые головы</li>
+                <li>распутывание спутанных придон формирование новых капсул укладка после процедуры</li>
+            </ul>
+            <p class="small">"сленности указано с работой местно</p>
+        </div>
+
+        <div class="other-services">
+            <h3>ОКРАШИВАНИЕ ВОЛОС</h3>
+            <div class="price-row"><span>Сложное окрошивание</span> <span>m13.000P 180000</span></div>
+
+            <h3>КЕРАТИНОВОЕ ВЫПРЯМЛЕНИЕ Волос</h3>
+            <div class="price-row"><span>Короткие вплосы Средние волося</span> <span>10:000</span></div>
+            <div class="price-row"><span>Длинии волос</span> <span>000-16000D</span></div>
+
+            <h3>БИКСИПЛАСТИЯ</h3>
+            <div class="price-row"><span>Короткие волосы Средние волоси Длинные волосы</span> <span>or 12.000-16.0000</span></div>
+
+            <div class="service-details">
+                <h4>TOKIO InkAramı</h4>
+                <p>Система глубокого восстановления, не имеющая аналогов в мире</p>
+                <p>Суть ухода японская Анита ступеннатай система глубокого восстановления волос на молекулярном уровне. В отличие молекуларном убоя повереностных уводой, пна работает , восстанавлива структуру</p>
+                <p>Кому подходит. Идеальн ных пористые или хенически</p>
+                <p>Процедура Эффект держится от 4 до 6 недель и ин карпанти Стоимость: накопительный</p>
+            </div>
+
+            <div class="service-details">
+                <h4>СЧАСТЬЕ ДЛя волос от LEBEL</h4>
+                <p>Уходы глубокое увлажнение и лечение. молекулярное восстановление, головн</p>
+                <p>Суть Суть уво увода: Lebel работает на молекуерния вопоса , восстанавливая внутренной структуру просто маскируя дефекти</p>
+                <p>Кому подходит: Идеаль поврежденных, сучек, окрашенные волос  также для стлиуляции роста.</p>
+                <p>Процедура: Проводится курсом 3-6 свансові или однократно, часто сочетается с окрашнение</p>
+                <p>Стоимость: Абонемент на 5 процедур Сканий Длинные наращенные Абонамент на  процедур тын</p>
+            </div>
+
+            <h3>ВИЗАЖИСТ</h3>
+            <div class="price-row"><span>Машное пранн</span> <span>70000 / 120000</span></div>
+            <button>ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container footer-inner">
-            <div class="footer-contacts">
-                <h2>КОНТАКТЫ</h2>
-                <p><strong>Адрес:</strong> г. Санкт-Петербург, ул. Садовая 67</p>
-                <p><strong>Режим работы:</strong> пн-сб по предварительной записи (10:00 - 22:00)</p>
-                <p><strong>Связаться с нами:</strong> <a href="tel:+79819115949">+7 (981)-911-59-49</a></p>
-                <p><strong>Мы в соц.сетях:</strong></p>
-                <p>@by_liza_kalinina_hair</p>
-                <p>@Lizalovebagratm</p>
-            </div>
-            <div class="footer-map">
-                <img src="images/map.jpg" alt="Карта Садовая 67">
-            </div>
+    <section id="training" class="training-section container">
+        <div class="training-image">
+            <img src="images/hair-racks.jpg" alt="Волосы на вешалках" class="img-fluid">
+        </div>
+        <div class="training-content">
+            <h2>ОБУЧЕНИЕ by Liza Kalinina</h2>
+            <h3>АТМОСФЕРА СТУДИИ</h3>
+            <p>Этот курс для тебя если, если ты хочешь:</p>
+            <ul>
+                <li>Научиться делать маленькие аккурай Ние капсулы ккуратнее капсулы быстро</li>
+                <li>научиться быстро наращивать и сн наращивать и снимать волосы</li>
+                <li>делать крутые и пржие проданция работы</li>
+                <li>разбираться на 100% в волосах и знать какие качественный, в нание нет</li>
+                <li>инеть бату проверенних поставщиков</li>
+            </ul>
+            
+            <h4>На курсе:</h4>
+            <ul>
+                <li>КРОК капсулирования</li>
+                <li>УРОК снятия испос</li>
+                <li>УРОК наращивания волос</li>
+                <li>УРОК коррекции волос</li>
+                <li>отработки на моделях</li>
+                <li>сертификат</li>
+                <li>подавания 24/7</li>
+            </ul>
+            
+            <p>5-ти дневный курс</p>
+            <p>Длительность каждого занятия до 8 часов</p>
+            <p class="highlight-price">Стоимость курса - 75.000</p>
+            <p>10:00 - 22:00 пн-сб по предварительной записи</p>
+            <button>ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
+        </div>
+    </section>
+
+    <footer class="footer-section container">
+        <div class="footer-info">
+            <h2>КОНТАКТЫы</h2>
+            <p>Адрес: г. Санкт-Петербург, ул. Садовая 67</p>
+            <p>Связаться с нами: +7 (981)-911-59-49</p>
+            <p>Мы в соц.сетях:</p>
+            <p>@by liza kalinina hair</p>
+            <p>@Lizalovebagratm</p>
+            <p>+7 (981)-911-59-49</p>
+        </div>
+        <div class="footer-map">
+            <img src="images/map.jpg" alt="Карта" class="img-fluid">
         </div>
     </footer>
 
